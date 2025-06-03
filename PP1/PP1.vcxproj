@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\PP1\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\PP1\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\Opengl\PP1\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\Opengl\PP1\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\PP1\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\PP1\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\Opengl\PP1\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Loljk\Documents\CMGT\Y2\personal portfolio\PersonalPortfolio1\Opengl\PP1\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
