@@ -63,18 +63,18 @@ int main() {
 
 	std::string modelPath = ("models/ground/scene.gltf");
 
-	Model model((modelPath).c_str(),glm::vec3(0, -5, 0),10);
-	Model tree("models/trees/scene.gltf",glm::vec3(0,-5,0),10);
+	Model model((modelPath).c_str());
+	Model tree("models/trees/scene.gltf");
 
 
 	//While loop so the window only closes when i choose to close it
 	while (!glfwWindowShouldClose(window))
 	{
-		glClearColor(0, 0.5f, 0.5f, 1);
+		glClearColor(0.85f, 0.85f, 0.90f, 1);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		//Tell OpenGL which Shader Program we want to use
 		camera.Inputs(window);
-		camera.updateMatrix(45.f, 0.1f, 500.f);
+		camera.updateMatrix(45.f, 0.1f, 100.f);
 
 		model.Draw(shaderProgram, camera);
 		tree.Draw(shaderProgram, camera);
