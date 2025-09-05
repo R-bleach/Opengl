@@ -65,8 +65,8 @@ int main() {
 
 	Model model((modelPath).c_str());
 	Model tree("models/trees/scene.gltf");
-	Model win("models/win2/scene.gltf");
-	unsigned int scene = 1;
+	Model win("models/win2/scene.gltf",glm::vec3(0.f,3.5f,-3.5f));
+	unsigned int scene = 2;
 
 	//While loop so the window only closes when i choose to close it
 	while (!glfwWindowShouldClose(window))
@@ -90,8 +90,14 @@ int main() {
 			glClearColor(0.f, 0.f, 0.f, 1);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			//Tell OpenGL which Shader Program we want to use
-			camera.Position = glm::vec3(0.f, 0.f, 0.f);
+			camera.SetPosition(glm::vec3(0.f, 3.5f, 0.f));
+			camera.SetRotation(glm::vec3(0.0f, 0.0f, -1.0f));
 			camera.updateMatrix(45.f, 0.1f, 100.f);
+
+			if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+			{
+				scene = 1;
+			}
 
 			win.Draw(shaderProgram, camera);
 		}

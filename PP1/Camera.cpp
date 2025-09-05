@@ -45,7 +45,7 @@ void Camera::Inputs(GLFWwindow* window)
 	}
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 	{
-		Position += speed * glm::vec3(-Orientation.x,0,-Orientation.z);
+		Position += speed * glm::vec3(-Orientation.x, 0, -Orientation.z);
 	}
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 	{
@@ -115,4 +115,14 @@ void Camera::Inputs(GLFWwindow* window)
 		// Makes sure the next time the camera looks around it doesn't jump
 		firstClick = true;
 	}
+
+}
+void Camera::SetPosition(glm::vec3 pos)
+{
+	Position = pos;
+}
+
+void Camera::SetRotation(glm::vec3 rot)
+{
+	Orientation = rot;
 }

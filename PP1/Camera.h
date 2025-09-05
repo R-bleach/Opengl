@@ -42,5 +42,8 @@ public:
 	void Matrix(Shader& shader, const char* uniform);
 	// Handles camera inputs
 	void Inputs(GLFWwindow* window);
+
+	void SetPosition(glm::vec3 pos);
+	void SetRotation(glm::vec3 rot);
 };
 #endif
