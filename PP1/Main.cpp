@@ -63,8 +63,8 @@ int main() {
 
 	std::string modelPath = ("models/ground/scene.gltf");
 
-	Model model((modelPath).c_str(),glm::vec3(0, -5, 0),10);
-	Model tree("models/trees/scene.gltf",glm::vec3(0,-5,0),10);
+	Model model((modelPath).c_str(), glm::vec3(0, -5, 0), 10);
+	Model tree("models/trees/scene.gltf", glm::vec3(0, -5, 0), 10);
 
 
 	//While loop so the window only closes when i choose to close it
