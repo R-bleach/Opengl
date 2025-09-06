@@ -1,8 +1,0 @@
-Model Information:
-* title:	Jabami Anime Tree v2
-* source:	https://sketchfab.com/3d-models/jabami-anime-tree-v2-2b04272463c2451690964946210418ef
-* author:	JABAMI Production (https://sketchfab.com/JabamiProduction)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

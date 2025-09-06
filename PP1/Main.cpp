@@ -61,12 +61,12 @@ int main() {
 
 	Camera camera(width, height, glm::vec3(0.0f, 3.5f, 0.0f));
 
-	std::string modelPath = ("models/ground/scene.gltf");
+	std::string modelPath = "models/ground/scene.gltf";
 
-	Model model((modelPath).c_str());
-	Model tree("models/trees/scene.gltf");
-	Model win("models/win2/scene.gltf",glm::vec3(0.f,3.5f,-3.5f));
-	unsigned int scene = 2;
+	Model model((modelPath).c_str(), glm::vec3(0.f, 0.f, 0.f));
+	Model scroll("models/scroll/scene.gltf", glm::vec3(20.f, 1.5f, 22.f),0.01f);
+	Model tree("models/trees/scene.gltf",glm::vec3(0.f, 0.f, 0.f));
+	unsigned int scene = 1;
 
 	//While loop so the window only closes when i choose to close it
 	while (!glfwWindowShouldClose(window))
@@ -77,11 +77,16 @@ int main() {
 			//Tell OpenGL which Shader Program we want to use
 			camera.Inputs(window);
 			camera.updateMatrix(45.f, 0.1f, 100.f);
-			if (camera.Position.x >= 10 && camera.Position.x <= 20 && camera.Position.z >= 10 && camera.Position.z <= 20)
+			std::cout << camera.Position.x;
+			std::cout << "x ";
+			std::cout << camera.Position.z;
+			std::cout << "z ";
+			if (camera.Position.x >= 20 && camera.Position.x <= 22 && camera.Position.z >= 21 && camera.Position.z <= 23)
 			{
 				scene = 2;
 			}
 
+			scroll.Draw(shaderProgram, camera);
 			model.Draw(shaderProgram, camera);
 			tree.Draw(shaderProgram, camera);
 		}
@@ -99,7 +104,6 @@ int main() {
 				scene = 1;
 			}
 
-			win.Draw(shaderProgram, camera);
 		}
 		//Draw the triangle using GL_TRIANGLES primitive
 		glfwSwapBuffers(window);
